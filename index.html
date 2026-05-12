@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Francisco Filipe — Senior Backend Engineer | Python &amp; Distributed Systems</title>
-    <meta name="description" content="Senior Backend Engineer specialising in Python, Celery, Redis, and PostgreSQL. 5+ years scaling distributed data platforms from 100K to 100M+ requests. Available for fully remote roles and B2B contracts.">
+    <meta name="description" content="Senior Backend Engineer specialising in Python, Celery, Redis, PostgreSQL, and Elasticsearch. 10+ years programming, 5+ years scaling distributed data platforms from 100K to 100M+ requests. Available for fully remote roles across Europe and the UK — full-time or B2B.">
     <meta name="author" content="Francisco Filipe">
     <meta property="og:title" content="Francisco Filipe — Senior Backend Engineer">
     <meta property="og:description" content="Python &middot; Distributed Systems &middot; Data Platforms. Available for fully remote roles and B2B contracts.">
@@ -14,7 +14,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
         :root {
             --bg: #0a0f1c;
@@ -30,7 +34,9 @@
             --gradient: linear-gradient(135deg, #64ffda 0%, #4f9eff 100%);
         }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -46,9 +52,8 @@
             content: '';
             position: fixed;
             inset: 0;
-            background:
-                radial-gradient(ellipse 80% 60% at 20% 0%, rgba(100, 255, 218, 0.08), transparent 60%),
-                radial-gradient(ellipse 60% 50% at 80% 100%, rgba(79, 158, 255, 0.06), transparent 60%);
+            background: radial-gradient(ellipse 80% 60% at 20% 0%, rgba(100, 255, 218, 0.08), transparent 60%),
+            radial-gradient(ellipse 60% 50% at 80% 100%, rgba(79, 158, 255, 0.06), transparent 60%);
             pointer-events: none;
             z-index: 0;
         }
@@ -61,7 +66,9 @@
             z-index: 1;
         }
 
-        code { font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace; }
+        code {
+            font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+        }
 
         /* ---------- Navigation ---------- */
         nav {
@@ -73,6 +80,7 @@
             background: rgba(10, 15, 28, 0.75);
             border-bottom: 1px solid var(--border);
         }
+
         .nav-inner {
             display: flex;
             justify-content: space-between;
@@ -81,6 +89,7 @@
             max-width: 1100px;
             margin: 0 auto;
         }
+
         .logo {
             font-family: 'JetBrains Mono', monospace;
             font-weight: 600;
@@ -88,8 +97,17 @@
             color: var(--text);
             text-decoration: none;
         }
-        .logo span { color: var(--accent); }
-        .nav-links { display: flex; gap: 28px; align-items: center; }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
@@ -97,14 +115,21 @@
             font-weight: 500;
             transition: color 0.2s;
         }
-        .nav-links a:hover { color: var(--accent); }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
         .nav-cta {
             padding: 8px 16px;
             border: 1px solid var(--accent);
             border-radius: 6px;
             color: var(--accent) !important;
         }
-        .nav-cta:hover { background: var(--accent-glow); }
+
+        .nav-cta:hover {
+            background: var(--accent-glow);
+        }
 
         /* ---------- Hero ---------- */
         .hero {
@@ -113,6 +138,7 @@
             align-items: center;
             padding: 80px 0;
         }
+
         .hero-eyebrow {
             display: inline-flex;
             align-items: center;
@@ -126,6 +152,7 @@
             border: 1px solid rgba(100, 255, 218, 0.3);
             border-radius: 999px;
         }
+
         .hero-eyebrow::before {
             content: '';
             width: 8px;
@@ -135,10 +162,16 @@
             box-shadow: 0 0 12px var(--accent);
             animation: pulse 2s infinite;
         }
+
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.4;
+            }
         }
+
         h1.hero-name {
             font-size: clamp(40px, 7vw, 72px);
             font-weight: 800;
@@ -146,12 +179,14 @@
             letter-spacing: -0.03em;
             margin-bottom: 16px;
         }
+
         h1.hero-name span {
             background: var(--gradient);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .hero-title {
             font-size: clamp(20px, 2.5vw, 26px);
             font-weight: 500;
@@ -159,6 +194,7 @@
             margin-bottom: 28px;
             max-width: 720px;
         }
+
         .hero-desc {
             font-size: 17px;
             color: var(--text-muted);
@@ -166,7 +202,13 @@
             margin-bottom: 40px;
             line-height: 1.7;
         }
-        .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -180,28 +222,39 @@
             cursor: pointer;
             border: 1px solid transparent;
         }
+
         .btn-primary {
             background: var(--accent);
             color: var(--bg);
         }
+
         .btn-primary:hover {
             background: var(--accent-dim);
             transform: translateY(-2px);
             box-shadow: 0 12px 24px -8px var(--accent-glow);
         }
+
         .btn-secondary {
             background: transparent;
             color: var(--text);
             border-color: var(--border);
         }
+
         .btn-secondary:hover {
             border-color: var(--accent);
             color: var(--accent);
         }
 
         /* ---------- Sections ---------- */
-        section { padding: 100px 0; position: relative; }
-        .section-header { margin-bottom: 56px; }
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-header {
+            margin-bottom: 56px;
+        }
+
         .section-eyebrow {
             font-family: 'JetBrains Mono', monospace;
             color: var(--accent);
@@ -210,12 +263,14 @@
             margin-bottom: 12px;
             display: block;
         }
+
         h2.section-title {
             font-size: clamp(28px, 4vw, 40px);
             font-weight: 700;
             letter-spacing: -0.02em;
             margin-bottom: 16px;
         }
+
         .section-desc {
             color: var(--text-muted);
             font-size: 17px;
@@ -229,6 +284,7 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
         }
+
         .stat {
             padding: 28px;
             background: var(--bg-elev);
@@ -236,10 +292,12 @@
             border-radius: 12px;
             transition: all 0.3s;
         }
+
         .stat:hover {
             border-color: var(--accent);
             transform: translateY(-4px);
         }
+
         .stat-num {
             font-size: 36px;
             font-weight: 800;
@@ -251,6 +309,7 @@
             font-family: 'JetBrains Mono', monospace;
             letter-spacing: -0.02em;
         }
+
         .stat-label {
             color: var(--text-muted);
             font-size: 14px;
@@ -264,19 +323,26 @@
             gap: 60px;
             align-items: start;
         }
+
         .about-text p {
             color: var(--text-muted);
             margin-bottom: 18px;
             font-size: 16px;
             line-height: 1.8;
         }
-        .about-text strong { color: var(--text); font-weight: 600; }
+
+        .about-text strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
         .about-card {
             padding: 28px;
             background: var(--bg-elev);
             border: 1px solid var(--border);
             border-radius: 12px;
         }
+
         .about-card h4 {
             font-size: 14px;
             font-family: 'JetBrains Mono', monospace;
@@ -284,7 +350,11 @@
             margin-bottom: 14px;
             font-weight: 500;
         }
-        .about-card-list { list-style: none; }
+
+        .about-card-list {
+            list-style: none;
+        }
+
         .about-card-list li {
             padding: 10px 0;
             border-bottom: 1px solid var(--border);
@@ -293,8 +363,15 @@
             display: flex;
             justify-content: space-between;
         }
-        .about-card-list li:last-child { border-bottom: none; }
-        .about-card-list li strong { color: var(--text); font-weight: 500; }
+
+        .about-card-list li:last-child {
+            border-bottom: none;
+        }
+
+        .about-card-list li strong {
+            color: var(--text);
+            font-weight: 500;
+        }
 
         /* ---------- Services ---------- */
         .services-grid {
@@ -302,6 +379,7 @@
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 20px;
         }
+
         .service {
             padding: 32px;
             background: var(--bg-elev);
@@ -311,6 +389,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .service::before {
             content: '';
             position: absolute;
@@ -320,11 +399,17 @@
             transition: opacity 0.3s;
             z-index: 0;
         }
+
         .service:hover {
             border-color: var(--accent);
             transform: translateY(-4px);
         }
-        .service > * { position: relative; z-index: 1; }
+
+        .service > * {
+            position: relative;
+            z-index: 1;
+        }
+
         .service-icon {
             width: 44px;
             height: 44px;
@@ -337,11 +422,13 @@
             margin-bottom: 18px;
             font-size: 22px;
         }
+
         .service h3 {
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 10px;
         }
+
         .service p {
             color: var(--text-muted);
             font-size: 14px;
@@ -354,12 +441,14 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
         }
+
         .skill-group {
             padding: 28px;
             background: var(--bg-elev);
             border: 1px solid var(--border);
             border-radius: 12px;
         }
+
         .skill-group h3 {
             font-family: 'JetBrains Mono', monospace;
             font-size: 14px;
@@ -367,11 +456,13 @@
             margin-bottom: 18px;
             font-weight: 500;
         }
+
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
         }
+
         .skill-tag {
             padding: 6px 12px;
             background: var(--bg-elev-2);
@@ -382,6 +473,7 @@
             font-family: 'JetBrains Mono', monospace;
             transition: all 0.2s;
         }
+
         .skill-tag:hover {
             border-color: var(--accent);
             color: var(--accent);
@@ -392,6 +484,7 @@
             position: relative;
             padding-left: 32px;
         }
+
         .timeline::before {
             content: '';
             position: absolute;
@@ -401,11 +494,16 @@
             width: 2px;
             background: var(--border);
         }
+
         .timeline-item {
             position: relative;
             padding-bottom: 40px;
         }
-        .timeline-item:last-child { padding-bottom: 0; }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -418,6 +516,7 @@
             border-radius: 50%;
             box-shadow: 0 0 0 4px var(--bg);
         }
+
         .timeline-meta {
             display: flex;
             flex-wrap: wrap;
@@ -425,21 +524,29 @@
             align-items: center;
             margin-bottom: 6px;
         }
+
         .timeline-date {
             font-family: 'JetBrains Mono', monospace;
             font-size: 13px;
             color: var(--accent);
         }
-        .timeline-company { color: var(--text-muted); font-size: 13px; }
+
+        .timeline-company {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
         .timeline-role {
             font-size: 19px;
             font-weight: 600;
             margin-bottom: 12px;
         }
+
         .timeline-list {
             list-style: none;
             color: var(--text-muted);
         }
+
         .timeline-list li {
             position: relative;
             padding-left: 20px;
@@ -447,6 +554,7 @@
             font-size: 15px;
             line-height: 1.65;
         }
+
         .timeline-list li::before {
             content: '▸';
             position: absolute;
@@ -460,28 +568,33 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
+
         .edu {
             padding: 24px;
             background: var(--bg-elev);
             border: 1px solid var(--border);
             border-radius: 12px;
         }
+
         .edu-date {
             font-family: 'JetBrains Mono', monospace;
             font-size: 12px;
             color: var(--accent);
             margin-bottom: 8px;
         }
+
         .edu h3 {
             font-size: 16px;
             font-weight: 600;
             margin-bottom: 6px;
         }
+
         .edu-school {
             color: var(--text-muted);
             font-size: 14px;
             margin-bottom: 10px;
         }
+
         .edu-note {
             color: var(--text-muted);
             font-size: 13px;
@@ -501,22 +614,27 @@
             position: relative;
             overflow: hidden;
         }
+
         .contact-card::before {
             content: '';
             position: absolute;
             inset: 0;
-            background:
-                radial-gradient(circle at 20% 0%, var(--accent-glow), transparent 50%),
-                radial-gradient(circle at 80% 100%, rgba(79, 158, 255, 0.1), transparent 50%);
+            background: radial-gradient(circle at 20% 0%, var(--accent-glow), transparent 50%),
+            radial-gradient(circle at 80% 100%, rgba(79, 158, 255, 0.1), transparent 50%);
             pointer-events: none;
         }
-        .contact-card > * { position: relative; }
+
+        .contact-card > * {
+            position: relative;
+        }
+
         .contact-card h2 {
             font-size: clamp(28px, 4vw, 40px);
             font-weight: 700;
             margin-bottom: 16px;
             letter-spacing: -0.02em;
         }
+
         .contact-card p {
             color: var(--text-muted);
             font-size: 17px;
@@ -524,6 +642,7 @@
             margin: 0 auto 32px;
             line-height: 1.7;
         }
+
         .contact-actions {
             display: flex;
             gap: 14px;
@@ -531,6 +650,7 @@
             flex-wrap: wrap;
             margin-bottom: 32px;
         }
+
         .contact-links {
             display: flex;
             gap: 24px;
@@ -538,6 +658,7 @@
             flex-wrap: wrap;
             font-size: 14px;
         }
+
         .contact-links a {
             color: var(--text-muted);
             text-decoration: none;
@@ -546,7 +667,10 @@
             align-items: center;
             gap: 6px;
         }
-        .contact-links a:hover { color: var(--accent); }
+
+        .contact-links a:hover {
+            color: var(--accent);
+        }
 
         /* ---------- Footer ---------- */
         footer {
@@ -560,12 +684,31 @@
 
         /* ---------- Responsive ---------- */
         @media (max-width: 768px) {
-            .nav-links { gap: 16px; }
-            .nav-links a:not(.nav-cta) { display: none; }
-            .about-grid { grid-template-columns: 1fr; gap: 32px; }
-            section { padding: 70px 0; }
-            .hero { padding: 50px 0; min-height: auto; }
-            .contact-card { padding: 40px 24px; }
+            .nav-links {
+                gap: 16px;
+            }
+
+            .nav-links a:not(.nav-cta) {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .hero {
+                padding: 50px 0;
+                min-height: auto;
+            }
+
+            .contact-card {
+                padding: 40px 24px;
+            }
         }
 
         /* ---------- Reveal animations ---------- */
@@ -574,13 +717,22 @@
             transform: translateY(20px);
             transition: opacity 0.7s ease, transform 0.7s ease;
         }
+
         .reveal.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
         @media (prefers-reduced-motion: reduce) {
-            .reveal { opacity: 1; transform: none; }
-            * { animation: none !important; transition: none !important; }
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
         }
     </style>
 </head>
@@ -601,10 +753,10 @@
 
 <header class="hero">
     <div class="container">
-        <div class="hero-eyebrow">Available for remote &amp; B2B contracts</div>
+        <div class="hero-eyebrow">Available across Europe &amp; UK — full-time or B2B</div>
         <h1 class="hero-name">Francisco Filipe<span>.</span></h1>
         <p class="hero-title">Senior Backend Engineer building <strong>distributed systems</strong> and <strong>high-scale data platforms</strong> in Python.</p>
-        <p class="hero-desc">5+ years scaling crawling and data pipelines from 100K to 100M+ requests. I take systems from architecture to production — and keep them running.</p>
+        <p class="hero-desc">10+ years programming, 5+ years scaling production crawling and data pipelines from 100K to 100M+ requests. I take systems from architecture to production — and keep them running.</p>
         <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">Hire me →</a>
             <a href="Francisco_Filipe_CV.pdf" target="_blank" rel="noopener" class="btn btn-secondary">Download CV</a>
@@ -616,6 +768,10 @@
     <div class="container">
         <div class="stats-grid reveal">
             <div class="stat">
+                <div class="stat-num">10+</div>
+                <div class="stat-label">Years programming</div>
+            </div>
+            <div class="stat">
                 <div class="stat-num">5+</div>
                 <div class="stat-label">Years remote backend</div>
             </div>
@@ -626,10 +782,6 @@
             <div class="stat">
                 <div class="stat-num">1000×</div>
                 <div class="stat-label">Throughput growth</div>
-            </div>
-            <div class="stat">
-                <div class="stat-num">24/7</div>
-                <div class="stat-label">Production ownership</div>
             </div>
         </div>
     </div>
@@ -643,9 +795,9 @@
         </div>
         <div class="about-grid reveal">
             <div class="about-text">
-                <p>I'm a <strong>Python backend engineer</strong> with 5+ years of fully remote experience building and scaling distributed systems at a UK-based SaaS company. My core stack is <strong>Python, Celery, Redis, and PostgreSQL</strong>, with additional experience in Flask, Node.js, Docker, Linux, and cloud platforms across AWS, GCP, and Azure.</p>
-                <p>At Little Forest, I led the re-architecture of a legacy Java crawling platform into a Python-based distributed system, scaling it from <strong>100,000 to over 100 million requests</strong>. I designed high-performance data pipelines, implemented distributed task processing, optimised PostgreSQL at scale, and containerised core services with Docker. I manage Linux production infrastructure end-to-end and build RESTful APIs supporting both internal services and third-party integrations.</p>
-                <p>I'm comfortable working autonomously in remote-first environments, collaborating across time zones, and contributing to engineering standards through code review and documentation. I'm currently looking for a fully remote backend role — open to both <strong>employment and B2B contractor</strong> arrangements.</p>
+                <p>I'm a <strong>Python backend engineer</strong> with <strong>10+ years of programming experience</strong> and <strong>5+ years building production-grade backend platforms</strong> professionally — all in fully remote environments. My core stack is <strong>Python, Celery, Redis, PostgreSQL, Elasticsearch, Docker, and Linux</strong>.</p>
+                <p>At Little Forest, I led the re-architecture of a legacy Java crawling platform into a Python-based distributed system, scaling it from <strong>100,000 to over 100 million requests</strong>. I designed high-performance data pipelines, implemented distributed task processing, optimized PostgreSQL at scale, and containerized core services with Docker. I manage Linux production infrastructure end-to-end and build RESTful APIs supporting both internal services and third-party integrations.</p>
+                <p>Beyond development, I'm responsible for <strong>production reliability, infrastructure maintenance, monitoring, and operational troubleshooting</strong> across distributed services. I enjoy technically challenging work involving scalability, automation, and high-volume data processing — and I'm currently open to new remote opportunities <strong>across Europe and the UK</strong>, full-time or B2B.</p>
             </div>
             <aside class="about-card">
                 <h4>// quick facts</h4>
@@ -653,6 +805,7 @@
                     <li><span>Location</span><strong>Caldas da Rainha, PT</strong></li>
                     <li><span>Time zone</span><strong>WET / WEST (UTC±0/+1)</strong></li>
                     <li><span>Remote</span><strong>5+ years</strong></li>
+                    <li><span>Scope</span><strong>Europe &amp; UK</strong></li>
                     <li><span>Languages</span><strong>EN (C2) · PT (Native)</strong></li>
                     <li><span>Engagement</span><strong>Full-time · B2B</strong></li>
                     <li><span>Status</span><strong style="color: var(--accent);">Open to offers</strong></li>
@@ -667,7 +820,7 @@
         <div class="section-header reveal">
             <span class="section-eyebrow">// 02 — services</span>
             <h2 class="section-title">What I can build for you.</h2>
-            <p class="section-desc">Available for full-time roles or B2B contracts — long-term partnerships preferred. I help teams ship reliable backend systems and recover from scaling pain.</p>
+            <p class="section-desc">Available for full-time roles or B2B contracts — long-term partnerships are preferred. I help teams ship reliable backend systems and recover from scaling pain.</p>
         </div>
         <div class="services-grid reveal">
             <article class="service">
@@ -693,7 +846,7 @@
             <article class="service">
                 <div class="service-icon">🐳</div>
                 <h3>DevOps &amp; Infrastructure</h3>
-                <p>Linux production ops, Docker, CI/CD, monitoring. Cloud experience across AWS, GCP, and Azure — ready to own the deploy pipeline too.</p>
+                <p>Linux production ops, Docker, CI/CD, monitoring, and operational troubleshooting. End-to-end ownership from deployment pipeline to 2 a.m. pager rotations.</p>
             </article>
             <article class="service">
                 <div class="service-icon">🤖</div>
@@ -741,11 +894,12 @@
                 </div>
             </div>
             <div class="skill-group">
-                <h3>// cloud</h3>
+                <h3>// reliability</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">GCP</span>
-                    <span class="skill-tag">Azure</span>
+                    <span class="skill-tag">Monitoring</span>
+                    <span class="skill-tag">Troubleshooting</span>
+                    <span class="skill-tag">Automation</span>
+                    <span class="skill-tag">High availability</span>
                 </div>
             </div>
             <div class="skill-group">
@@ -787,9 +941,9 @@
                     <li>Scaled crawling infrastructure from ~100K page crawls to <strong>100M+ requests</strong></li>
                     <li>Built high-performance data pipelines processing millions of web records daily</li>
                     <li>Extended the platform to support PDF ingestion and structured data extraction</li>
-                    <li>Built and optimised RESTful APIs for internal services and third-party integrations</li>
+                    <li>Built and optimized RESTful APIs for internal services and third-party integrations</li>
                     <li>Implemented distributed task processing with Celery + Redis for throughput and fault tolerance</li>
-                    <li>Designed, optimised, and maintained PostgreSQL / ElasticSearch databases at scale</li>
+                    <li>Designed, optimized, and maintained PostgreSQL / ElasticSearch databases at scale</li>
                     <li>Managed Linux production infrastructure end-to-end</li>
                     <li>Conducted code reviews and contributed to engineering standards across cross-functional teams</li>
                 </ul>
@@ -801,7 +955,7 @@
                 </div>
                 <h3 class="timeline-role">External Vice President</h3>
                 <ul class="timeline-list">
-                    <li>Led external partnerships and cross-team coordination within a university consulting organisation during BSc studies</li>
+                    <li>Led external partnerships and cross-team coordination within a university consulting organization during B.Sc. studies</li>
                 </ul>
             </div>
             <div class="timeline-item">
@@ -881,7 +1035,7 @@
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    }, {threshold: 0.1, rootMargin: '0px 0px -50px 0px'});
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
